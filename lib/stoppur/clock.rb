@@ -8,7 +8,7 @@ module Stoppur
     require 'stoppur/time/java_clock'
     Clock = Time::JavaClock
   else
-    require 'stoppur/time/naive_clock'
-    Clock = Time::NaiveClock
+    require 'stoppur/time/c_clock'
+    Clock = Time::CClock
   end
 end
