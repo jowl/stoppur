@@ -1,6 +1,7 @@
 # encoding: utf-8
 
 require 'spec_helper'
+require 'timecop'
 
 module Stoppur
   describe Clock do
@@ -26,6 +27,13 @@ module Stoppur
       it 'increases when time passes' do
         sleep 0.1
         expect(clock.time).to be > before
+      end
+
+      it 'increases despite (Ruby) Time is moving backwards' do
+        Timecop.travel(-1) do
+          sleep 0.1
+          expect(clock.time).to be > before
+        end
       end
     end
   end
