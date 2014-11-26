@@ -35,6 +35,11 @@ module Stoppur
           expect(clock.time).to be > before
         end
       end
+
+      it 'returns time in seconds' do
+        sleep 0.1
+        expect(clock.time-before).to be_within(0.01).of(0.1)
+      end
     end
   end
 end
