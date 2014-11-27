@@ -9,8 +9,9 @@ etc.
 
 ## Installation
 
-There will be a gem soon, but until then you'll have to clone this
-repo. Sorry about that.
+```
+$ gem install stoppur
+```
 
 ## Usage
 

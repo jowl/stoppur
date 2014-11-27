@@ -1,4 +1,4 @@
-#include "c_clock.h"
+#include <ruby.h>
 
 #ifdef __MACH__
 #include <mach/clock.h>
@@ -6,6 +6,9 @@
 #else
 #include <time.h>
 #endif
+
+void Init_stoppur();
+VALUE method_time(VALUE self);
 
 VALUE Stoppur = Qnil;
 VALUE Time = Qnil;

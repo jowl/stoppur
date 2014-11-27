@@ -1,3 +1,3 @@
 require 'mkmf'
 
-create_makefile 'c_clock', File.expand_path('../time', __FILE__)
+create_makefile 'stoppur/time/c_clock', File.expand_path('../time', __FILE__)
