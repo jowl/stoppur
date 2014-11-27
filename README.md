@@ -1,5 +1,7 @@
 # Stoppur
 
+[![Build Status](https://travis-ci.org/jowl/stoppur.svg?branch=master)](https://travis-ci.org/jowl/stoppur)
+
 Stoppur means stopwatch in Swedish, and is an attempt of avoiding
 using `Time` when measuring time in Ruby. The main problem with
 measuring time using Ruby's `Time` is that it isn't monotonic, which
