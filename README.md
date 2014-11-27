@@ -31,6 +31,12 @@ rescue => e
   puts 'raised error after %.4f s' % stopwatch.elapsed
 end
 
+# or
+stopwatch = Stoppur.start
+# do some work
+puts 'did some work in %.4f s' % stopwatch.elapsed
+# do the rest of the work
+puts 'did all of the work in %.4f s' % stopwatch.elapsed
 ```
 
 ## Supported platforms
