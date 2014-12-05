@@ -25,12 +25,12 @@ VALUE method_time(VALUE self) {
 #ifdef __MACH__
   mach_timespec_t ts;
   clock_serv_t cclock;
-  host_get_clock_service(mach_host_self(), CALENDAR_CLOCK, &cclock);
+  host_get_clock_service(mach_host_self(), SYSTEM_CLOCK, &cclock);
   clock_get_time(cclock, &ts);
   mach_port_deallocate(mach_task_self(), cclock);
 #else
   struct timespec ts;
-  clock_gettime(CLOCK_REALTIME, &ts);
+  clock_gettime(CLOCK_MONOTONIC, &ts);
 #endif
   return DBL2NUM(ts.tv_sec + ts.tv_nsec / 1e9);
 }
