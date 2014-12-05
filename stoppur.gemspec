@@ -2,7 +2,7 @@ gemspec = Gem::Specification.new do |s|
   java = (RUBY_PLATFORM == 'java') && 'java'
 
   s.name        = 'stoppur'
-  s.version     = '0.0.2'
+  s.version     = '0.0.3'
   s.platform    = java || Gem::Platform::RUBY
   s.author      = 'Joel Segerlind'
   s.email       = 'joel@jowl.se'
